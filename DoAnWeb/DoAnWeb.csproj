@@ -1775,14 +1775,9 @@
     <Content Include="Content\images\banner6.jpg" />
     <Content Include="Content\images\banner7.jpg" />
     <Content Include="Content\images\banner8.jpg" />
-    <Content Include="Content\images\banner_2.jpg" />
-    <Content Include="Content\images\banner_3.jpg" />
-    <Content Include="Content\images\banner_4.jpg" />
     <Content Include="Content\images\banner_5.jpg" />
     <Content Include="Content\images\banner_6.jpg" />
     <Content Include="Content\images\banner_7.jpg" />
-    <Content Include="Content\images\banner_8.jpg" />
-    <Content Include="Content\images\banner_9.jpg" />
     <Content Include="Content\images\bestselling.png" />
     <Content Include="Content\images\bg_sale_off.jpg" />
     <Content Include="Content\images\brand.png" />
