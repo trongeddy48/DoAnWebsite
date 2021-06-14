@@ -1,0 +1,352 @@
+img.product-img-primary {
+    width: 100%;
+}
+img.product-img-list {
+    width: 80px;
+    border: 1px solid #a9a9a95c;
+    margin-bottom: 5px;
+}
+.product-breadcrumb {
+    font-size: 14px;
+    color: red;
+    padding: 20px 0px 10px;
+}
+h4.product-info {
+    color: #000;
+    font-weight: 400;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.product-star {
+    color: red;
+    font-size: 14px;
+}
+p.product-current {
+    color: red;
+    font-size: 22px;
+    font-weight: 500;
+}
+p.product-description {
+    color: #000;
+    font-size: 14px;
+}
+input.cart__body-quantity-total {
+    width: 30px;
+    text-align: center;
+    margin-left: -6px;
+}
+input.cart__body-quantity-plus {
+    text-align: center;
+    margin-left: -6px;
+}
+input.cart__body-quantity-minus {
+    width: 28px;
+}
+button.btn.btn-kx {
+    background: #dc3545;
+    color: #fff;
+    margin-left: 20px;
+}
+.product__main-info-contact {
+    display: flex;
+    margin: 30px 0;
+}
+i.fab.fa-facebook-f {
+    margin-right: 10px;
+    font-size: 18px;
+}
+a.product__main-info-contact-fb {
+    font-size: 16px;
+    background: #1e73be;
+    color: #fff;
+    height: 45PX;
+    border-radius: 2px;
+    width: 190PX;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product__main-info-contact-phone-icon {
+    font-size: 16px;
+    background: #dc3545;
+    color: #fff;
+    height: 45PX;
+    border-radius: 2px;
+    width: 190PX;
+    font-weight: 500;
+    margin-left: 20px;
+}
+i.fas.fa-phone-alt {
+    display: flex;
+    float: left;
+    font-size: 18px;
+    padding: 15px;
+}
+.product__main-info-contact-phone-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+.product__main-info-contact-phone-number {
+    font-size: 14px;
+}
+.col-md-12.product-tab {
+    height: 40px;
+    background: #efefef;
+    margin-top: 40px;
+    padding: 0;
+}
+a.product-active {
+    background: #ff0000;
+    color: #fff;
+    font-weight: 700;
+    display: inline-block;
+    padding: 8px 30px;
+}
+a.product-tab-link {
+    font-weight: 700;
+    padding: 8px 25px;
+    color: #000;
+}
+.col-md-12.product-content-wrap {
+    padding-top: 20px;
+    border-bottom: 1px solid #80808036;
+}
+.col-md-3.tl-border {
+	border-bottom: 1px solid #80808036;
+}
+h4.product-content {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+span.text-1 {
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+}
+p.text-content {
+    font-size: 14px;
+    color: #666;
+}
+h5.product-conten {
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.product__aside {
+    display: flex;
+    padding: 20px 10px 0px 0px;
+}
+img.product__aside-img {
+    height: 65px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    width: 70px;
+}
+img.product-img {
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    width: 50px;
+}
+p.product__aside-link-heading {
+    font-size: 15px;
+    color: #000;
+    margin: 0;
+    font-weight: 500;
+    display: grid;
+}
+span.text-2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+h5.product__aside-heading {
+    font-size: 18px;
+    padding-top: 20px;
+}
+.product__aside-list {
+    padding-bottom: 10px;
+    height: 115px;
+    border-bottom: 1px solid #80808033;
+    padding-top: 20px;
+}
+.icon-star {
+    font-size: 12px;
+    color: red;
+}
+span.product__aside-price-current {
+    color: red;
+    font-weight: 500;
+}
+h4.product__love-heading {
+    font-size: 20px;
+    color: red;
+    padding: 20px 0;
+}
+h6.product__panel-heading {
+    height: 40px;
+    padding-top: 10px;
+}
+a.product__panel-link {
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    display: flex;
+}
+i.fas.fa-star.product__panel-rate {
+    color: red;
+    font-size: 14px;
+}
+span.product__panel-price-current {
+    font-size: 16px;
+    color: red;
+    font-weight: 500;
+}
+.product__panel-rate-wrap {
+    padding-top: 7px;
+}
+/*hover*/
+img.product__aside-img:hover {
+    transform: scale(1.1);
+}
+img.product__panel-img:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05;)
+}
+/*responsive*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    h6.productt__aside-link-heading {
+    font-size: 14px;
+    }
+    h6.product__aside-link-heading {
+    font-size: 14px;
+    }
+    .icon-star {
+    font-size: 10px;
+    color: red;
+    }
+    span.product__aside-price-current {
+    font-size: 13px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    img.product-img-list {
+    width: 60px;
+    border: 1px solid #a9a9a95c;
+    margin-bottom: 5px;
+    }
+    a.product__main-info-contact-fb {
+    font-size: 11px;
+    background: #1e73be;
+    color: #fff;
+    height: 36PX;
+    border-radius: 2px;
+    width: 134PX;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    i.fab.fa-facebook-f {
+    margin-right: 10px;
+    font-size: 12px;
+    }
+    .product__main-info-contact-phone-icon {
+    font-size: 16px;
+    background: #dc3545;
+    color: #fff;
+    height: 36PX;
+    border-radius: 2px;
+    width: 139PX;
+    font-weight: 500;
+    margin-left: 20px;
+    }
+    i.fas.fa-phone-alt {
+    display: flex;
+    float: left;
+    font-size: 11px;
+    padding: 15px;
+    }
+    .product__main-info-contact-phone-title {
+    font-size: 12px;
+    font-weight: 500;
+    }
+    .product__main-info-contact-phone-number {
+    font-size: 11px;
+    }
+    p.product__aside-link-heading {
+    font-size: 12px;
+    color: #000;
+    margin: 0;
+    font-weight: 500;
+    display: grid;
+    }
+    span.text-2 {
+    margin: 0;
+    font-size: 11px;
+    font-weight: normal;
+    }
+    h6.productt__aside-link-heading {
+    font-size: 11px;
+    }
+    h6.product__aside-link-heading {
+    font-size: 11px;
+    }
+    .icon-star {
+    font-size: 7px;
+    color: red;
+    }
+    span.product__aside-price-current {
+    color: red;
+    font-weight: 500;
+    font-size: 12px;
+    }
+}
+@media (min-width: 320px) and (max-width: 479px) {
+    a.product__main-info-contact-fb {
+    font-size: 11px;
+    background: #1e73be;
+    color: #fff;
+    height: 36PX;
+    border-radius: 2px;
+    width: 134PX;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    i.fab.fa-facebook-f {
+    margin-right: 10px;
+    font-size: 12px;
+    }
+    .product__main-info-contact-phone-icon {
+    font-size: 16px;
+    background: #dc3545;
+    color: #fff;
+    height: 36PX;
+    border-radius: 2px;
+    width: 139PX;
+    font-weight: 500;
+    margin-left: 20px;
+    }
+    i.fas.fa-phone-alt {
+    display: flex;
+    float: left;
+    font-size: 11px;
+    padding: 15px;
+    }
+    .product__main-info-contact-phone-title {
+    font-size: 12px;
+    font-weight: 500;
+    }
+    .product__main-info-contact-phone-number {
+    font-size: 11px;
+    }
+}
