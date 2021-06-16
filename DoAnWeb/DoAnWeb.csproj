@@ -1780,6 +1780,7 @@
     <Content Include="Content\images\banner_5.jpg" />
     <Content Include="Content\images\banner_6.jpg" />
     <Content Include="Content\images\banner_7.jpg" />
+    <Content Include="Content\images\bell1.png" />
     <Content Include="Content\images\bestselling.png" />
     <Content Include="Content\images\bg_sale_off.jpg" />
     <Content Include="Content\images\brand.png" />
