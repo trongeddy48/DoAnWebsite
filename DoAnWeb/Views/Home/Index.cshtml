@@ -244,6 +244,26 @@
             </div>
         </div>
     </div>
+    <!-- San pham moi ve -->
+    <hr class="gach-ngang"/>
+    <div class="row">
+        <div class="bestselling__heading-wrap">
+            <img class="bestselling__heading-img" src="~/Content/images/newilove.jpg" alt="Sản phẩm bán chạy">
+            <div class="bestselling__heading">Sản phẩm mới tháng 6</div>
+        </div>
+    </div>
+    <div class="clearilove"></div>
+    <style>
+        .gach-ngang{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0,0,0,.1);
+        }
+        .clearilove{
+            margin-top: 20px;
+        }
+    </style>
     <div class="row">
         <div class="col-md-6 bestselling__banner-left">
             <img class="bestselling__banner-left-img" src="~/Content/images/banner9.jpg" alt="">
@@ -252,6 +272,7 @@
             <img class="bestselling__banner-right-img" src="~/Content/images/banner10.jpg" alt="">
         </div>
     </div>
+    <hr />
     <!-- end bestselling -->
     <!-- product -->
     <div class="row">
@@ -513,6 +534,7 @@
     </div>
     <!-- end product -->
     <!-- product love -->
+    <hr class="ilovepro" />
     <div class="row">
         <div class="col-md-12 product__love-title">
             <h2 class="product__love-heading">
@@ -521,6 +543,10 @@
             <style>
                 .product__love-heading{
                     text-align:center;
+                }
+                .ilovepro{
+                    margin-top: 30px;
+                    margin-bottom: 10px;
                 }
             </style>
         </div>
@@ -633,111 +659,181 @@
         <div class="banner-ads">
             <img src="~/Content/images/bell1.png" />
         </div>
+        <div class="clear"></div>
+        <div class="row-image">
+            <img src="~/Content/images/ad1.jpg" />
+            <img src="~/Content/images/ad2.jpg" />
+            <img src="~/Content/images/ad3.png" />
+        </div>
         <style>
-            .banner-ads img{
+            .banner-ads img {
                 width: 100%;
                 height: 100%;
             }
+
+            .row-image img {
+                width: 33%;
+                height: 100%;
+                justify-content: space-evenly;
+                transition: 0.6s ease-in-out;
+            }
+
+                .row-image img:hover {
+                    transform: scale(1.1);
+                }
+
+            .clear {
+                margin-bottom: 5px;
+            }
         </style>
         <!-- image beautiful end -->
-        <!-- post -->
-        <div class="row">
-            <div class="col-md-12 posts__title-wrap">
-                <h2 class="posts__heading">
-                    Tin tức - Bài viết
-                </h2>
+        <!-- SECTION BRAND-LOGO START-->
+        <div class="section brands container">
+            <hr class="logo-brand" />
+            <div class="logoilove">
+                <h2>Thương hiệu sản phẩm</h2>
             </div>
-            <hr>
+            <div class="glide" id="glide2">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <img src="~/Content/images/EA.jpg" />
+                        </li>
+                        <li class="glide__slide">
+                            <img src="~/Content/images/ps4.png" />
+                        </li>
+                        <li class="glide__slide">
+                            <img src="~/Content/images/steam.png" />
+                        </li>
+                        <li class="glide__slide">
+                            <img src="~/Content/images/UBSoft.png" />
+                        </li>
+                        <li class="glide__slide">
+                            <img src="~/Content/images/xbox.png" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <style>
+                .brands li img {
+                    width: 45%;
+                    object-fit: contain;
+                    height: 12rem;
+                }
+
+                .namelogo {
+                    margin-top: 20px;
+                }
+
+                .logoilove h2 {
+                    text-align: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-top: 30px;
+                }
+
+                .logo-brand {
+                    margin-top: 25px;
+                    border: 0;
+                    border-top: 1px solid #ff0000;
+                }
+            </style>
         </div>
-        <div class="row">
-            <div class="col-md-3 posts__item">
-                <img class="posts__item-img" src="~/Content/images/product_1.png">
-                <h6 class="posts__item-title">
-                    Kinh nghiệm mua mũ bảo hiểm
-                    cho người đi phượt
-                </h6>
-                <div class="posts__item-date">
-                    28/05/2020
+        <!-- logo game end -->
+
+        <!-- BLOG START-->
+        <div class="container-blog">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="~/Content/images/hinh1.jpg" />
                 </div>
-                <i class="fa fa-folder posts__item-cate-icon"></i>
-                <div class="posts__item-cate-name">
-                    Tin tức
-                </div>
-                <i class="fa fa-user posts__item-cate-ad-icon"></i>
-                <div class="posts__item-cate-ad-name">
-                    Thành Long
-                </div>
-                <div class="posts__item-description">
-                    Trong bài viết này mình hướng dẫn các bạn chọn lựa loại mũ bảo hiểm chất lượng, đảm bảo sự anh toàn...
+                <div class="content">
+                    <h2>Card One</h2>
+                    <p>
+                        Suckhoedoisong.vn - Bản tin dịch COVID-19 trưa 17/6
+                        cuả Bộ Y tế cho biết có 220 ca mắc COVID-19 tại 9 địa phương,
+                        trong đó riêng Bắc Giang đã 178 ca.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-3 posts__item">
-                <img class="posts__item-img" src="~/Content/images/post_1.jpg">
-                <h6 class="posts__item-title">
-                    Kinh nghiệm đi phượt bằng xe máy
-                </h6>
-                <div class="posts__item-date">
-                    05/06/2020
+            <div class="card">
+                <div class="imgBx">
+                    <img src="~/Content/images/hinh3.jpg" />
                 </div>
-                <i class="fa fa-folder posts__item-cate-icon"></i>
-                <div class="posts__item-cate-name">
-                    Tin tức
-                </div>
-                <i class="fa fa-user posts__item-cate-ad-icon"></i>
-                <div class="posts__item-cate-ad-name">
-                    Thành Long
-                </div>
-                <div class="posts__item-description">
-                    Trong bài viết này mình chia sẻ kinh nghiệm đi phượt bằng xe máy cho những người đang dự định đi phượt...
+                <div class="content">
+                    <h2>Card two</h2>
+                    <p>
+                        Suckhoedoisong.vn - Bản tin dịch COVID-19 trưa 17/6
+                        cuả Bộ Y tế cho biết có 220 ca mắc COVID-19 tại 9 địa phương,
+                        trong đó riêng Bắc Giang đã 178 ca.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-3 posts__item">
-                <img class="posts__item-img" src="~/Content/images/post_2.jpg">
-                <h6 class="posts__item-title">
-                    Giới thiệu các địa điểm phải đến khi đi phượt Hà Giang
-                </h6>
-                <div class="posts__item-date">
-                    26/05/2020
+            <div class="card">
+                <div class="imgBx">
+                    <img src="~/Content/images/hinh2.jpg" />
                 </div>
-                <i class="fa fa-folder posts__item-cate-icon"></i>
-                <div class="posts__item-cate-name">
-                    Tin tức
+                <div class="content">
+                    <h2>Card three</h2>
+                    <p>
+                        Suckhoedoisong.vn - Bản tin dịch COVID-19 trưa 17/6
+                        cuả Bộ Y tế cho biết có 220 ca mắc COVID-19 tại 9 địa phương,
+                        trong đó riêng Bắc Giang đã 178 ca.
+                    </p>
                 </div>
-                <i class="fa fa-user posts__item-cate-ad-icon"></i>
-                <div class="posts__item-cate-ad-name">
-                    Thành Long
-                </div>
-                <div class="posts__item-description">
-                    Trong bài viết này mình chia sẻ về các địa điểm đẹp tại Hà Giang. Để các bạn có trải nghiệm tốt nhất trong chuyến đi...
-                </div>
-            </div>
-            <div class="col-md-3 posts__item">
-                <img class="posts__item-img" src="~/Content/images/product_4.png">
-                <h6 class="posts__item-title">
-                    Cách bảo vệ mũ bảo hiểm khi sử dụng
-                </h6>
-                <div class="posts__item-date">
-                    22/05/2020
-                </div>
-                <i class="fa fa-folder posts__item-cate-icon"></i>
-                <div class="posts__item-cate-name">
-                    Tin tức
-                </div>
-                <i class="fa fa-user posts__item-cate-ad-icon"></i>
-                <div class="posts__item-cate-ad-name">
-                    Thành Long
-                </div>
-                <div class="posts__item-description">
-                    Trong bài viết này mình hướng dẫn các bạn cách bảo vệ mũ bảo hiểm khi sử dụng...
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5">
-            </div>
-            <div class="col-md-2">
-                <button type="button" class="btn btn-danger">Xem thêm</button>
-            </div>
-            <div class="col-md-5">
             </div>
         </div>
+        <style>
+            .container-blog {
+                position: relative;
+                width: 1100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 30px;
+            }
+            .container-blog .card {
+                position: relative;
+                max-width: 300px;
+                height: 215px;
+                background: #808080;
+                margin: 30px 10px;
+                padding: 20px 15px;
+                display: flex;
+                flex-direction: column;
+                transition: 0.3s ease-in-out
+            }
+            .container-blog .card:hover {
+                height: 420px;
+            }
+            .container-blog .card .imgBx {
+                position: relative;
+                width: 260px;
+                height: 260px;
+                top: -60px;
+                z-index: 1;
+                text-align: center;
+            }
+            .container-blog .card .imgBx img {
+                max-width: 100%;
+                border-radius: 4px;
+            }
+            .container-blog .card .content {
+                position: relative;
+                margin-top: -140px;
+                padding: 10px 15px;
+                text-align: center;
+                color: #111;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+            }
+            .container-blog .card:hover .content {
+                visibility: visible;
+                opacity: 1;
+                margin-top: -40px;
+                transition-delay: 0.3s;
+            }
+        </style>
+        <!-- Blog end-->

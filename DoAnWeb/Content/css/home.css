@@ -203,9 +203,10 @@ span.product__panel-price-current {
     margin: 20px;
 }
 h2.product__love-heading {
-    font-size: 20px;
+    font-size: 24px;
     color: red;
     font-weight: 500;
+    font-family: Roboto;
 }
 h2.posts__heading {
     color: red;

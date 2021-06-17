@@ -1767,6 +1767,9 @@
     <Content Include="Content\fonts\fontawesome\webfonts\fa-brands-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\images\ad1.jpg" />
+    <Content Include="Content\images\ad2.jpg" />
+    <Content Include="Content\images\ad3.png" />
     <Content Include="Content\images\banner1.jpg" />
     <Content Include="Content\images\banner10.jpg" />
     <Content Include="Content\images\banner2.jpg" />
@@ -1784,6 +1787,7 @@
     <Content Include="Content\images\bestselling.png" />
     <Content Include="Content\images\bg_sale_off.jpg" />
     <Content Include="Content\images\brand.png" />
+    <Content Include="Content\images\EA.jpg" />
     <Content Include="Content\images\facebook.png" />
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\game1.jpg" />
@@ -1792,8 +1796,12 @@
     <Content Include="Content\images\game4.jpg" />
     <Content Include="Content\images\game5.jpg" />
     <Content Include="Content\images\game6.jpg" />
+    <Content Include="Content\images\hinh1.jpg" />
+    <Content Include="Content\images\hinh2.jpg" />
+    <Content Include="Content\images\hinh3.jpg" />
     <Content Include="Content\images\less.png" />
     <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\newilove.jpg" />
     <Content Include="Content\images\phone_top.png" />
     <Content Include="Content\images\post_1.jpg" />
     <Content Include="Content\images\post_2.jpg" />
@@ -1824,6 +1832,7 @@
     <Content Include="Content\images\product_7.png" />
     <Content Include="Content\images\product_8.png" />
     <Content Include="Content\images\product_9.png" />
+    <Content Include="Content\images\ps4.png" />
     <Content Include="Content\images\sanpham1.jpg" />
     <Content Include="Content\images\sanpham10.jpg" />
     <Content Include="Content\images\sanpham2.jpg" />
@@ -1835,13 +1844,17 @@
     <Content Include="Content\images\sanpham8.jpg" />
     <Content Include="Content\images\sanpham9.jpg" />
     <Content Include="Content\images\shipper.png" />
+    <Content Include="Content\images\steam.png" />
     <Content Include="Content\images\tiktok.png" />
+    <Content Include="Content\images\UBSoft.png" />
+    <Content Include="Content\images\xbox.png" />
     <Content Include="Content\images\youtube.png" />
     <Content Include="Content\images\zalo.png" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jq.js" />
     <Content Include="Content\js\jquery-3.3.1.js" />
     <Content Include="Content\js\owl.js" />
+    <Content Include="Content\js\slider.js" />
     <Content Include="Content\js\vue.js" />
     <Content Include="Content\owlcarousel\assets\ajax-loader.gif" />
     <Content Include="Content\owlcarousel\assets\owl.carousel.css" />

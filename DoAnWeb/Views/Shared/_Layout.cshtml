@@ -26,6 +26,9 @@
     <link href="~/Content/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet" />
     <script src="~/Content/owlcarousel/owl.carousel.min.js"></script>
     <script src="~/Content/js/owl.js"></script>
+
+    <!-- Glidejs StyleSheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" />
 </head>
 <body>
     <!-- container -->
@@ -94,33 +97,35 @@
             <div class="col-md-9 header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        @Html.ActionLink("Trang chủ", "Index", "Home", new { @class = "colorTextAction" }) &emsp;
+                        @Html.ActionLink("Trang chủ", "Index", "Home", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
-                        @Html.ActionLink("Giới thiệu", "Index", "Introduction", new { @class = "colorTextAction" }) &emsp;
+                        @Html.ActionLink("Giới thiệu", "Index", "Introduction", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item1">
                         <!-- //giải thích đoạn code: ActionLink nó không truyền thẳng css vào được, cho nên sau 3 thuộc tính, tạo new theo cú pháp new { }, trỏ cái class tới vùng chọn css/-->
-                        @Html.ActionLink("Sản phẩm", "Index", "product", new { @class = "colorTextAction" }) &emsp;
+                        @Html.ActionLink("Sản phẩm", "Index", "product", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
-                        @Html.ActionLink("Bài viết", "Index", "Post", new { @class = "colorTextAction" }) &emsp;
+                        @Html.ActionLink("Bài viết", "Index", "Post", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
-                        @Html.ActionLink("Cộng tác", "Index", "Post", new { @class = "colorTextAction" }) &emsp;
+                        @Html.ActionLink("Cộng tác", "Index", "Post", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
-                        @Html.ActionLink("Liên hệ", "Index", "Contact", new { @class = "colorTextAction" })
+                        @Html.ActionLink("Liên hệ", "Index", "Contact", null, new { @class = "colorTextAction" })
                     </li>
                     <!-- css start -->
                     <style>
-                        a.colorTextAction{
+                        a.colorTextAction {
                             color: #FFF;
+                            text-decoration: none;
                         }
-                        a.colorTextAction:hover{
-                            background-color: #ffd800;
-                            color: #000; 
-                        }
+
+                            a.colorTextAction:hover {
+                                background-color: #FFF;
+                                color: #000;
+                            }
                     </style>
                     <!-- css end -->
                 </ul>
@@ -204,5 +209,8 @@
         <!-- end footer -->
     </div>
     <!-- end container -->
+    <!-- Glidejs Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+    <script src="~/Content/js/slider.js"></script>
 </body>
 </html>
