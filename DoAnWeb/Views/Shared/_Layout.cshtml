@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Store GOD</title>
+    <title>Game Store K3T</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
@@ -30,6 +30,7 @@
     <!-- Glidejs StyleSheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontawesome/fontawesome-free@5.15.3/css/fontawesome.min.css%22%3E" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css%22%3E" />
 </head>
 <body>
     <!-- container -->
@@ -111,9 +112,6 @@
                         @Html.ActionLink("Bài viết", "Index", "Post", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
-                        @Html.ActionLink("Cộng tác", "Index", "Post", null, new { @class = "colorTextAction" }) &emsp;
-                    </li>
-                    <li class="header__nav-item">
                         @Html.ActionLink("Liên hệ", "Index", "Contact", null, new { @class = "colorTextAction" })
                     </li>
                     <!-- css start -->
@@ -134,6 +132,72 @@
         </div>
         @RenderBody()
         <!-- end post -->
+        <!-- Regester start-->
+        <section class="newsletter-area spad">
+            <div class="container">
+                <form method="post" action="#">
+                    <p>
+                        Đăng kí nhận tin để nhận được nhiều phần
+                        quà hấp dẫn của Game Store GOD.
+                    </p>
+                    <div class="row subscribe-sec">
+                        <div class="col-md-9">
+                            <input type="email" class="form-control" id="email"
+                                   name="email" placeholder="Nhập Email của bạn..."
+                                   required="" />
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn submit">
+                                Đăng ký
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <style>
+            .newsletter-area {
+                background-color: #f4f4f4;
+            }
+
+                .newsletter-area form {
+                    margin: 0 auto;
+                    width: 60%;
+                }
+
+                .newsletter-area p {
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                    color: #000;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 35px;
+                }
+
+            .subscribe-sec input {
+                padding: 12px;
+                color: #495057;
+                font-size: 15px;
+                border: none;
+                outline: none;
+                letter-spacing: -1px;
+                box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
+            }
+
+            .btn.submit {
+                background-color: #ff7200;
+                color: #fff;
+                padding: 12px 20px;
+                text-transform: uppercase;
+                font-size: 15px;
+                letter-spacing: 2px;
+                font-weight: 400;
+                box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
+                transition: all 0.3s;
+            }
+        </style>
+        <div class="clear-space" style="margin-bottom: 15px;"></div>
+        <!-- Regester end-->
         <!-- footer -->
         <footer>
             <div class="container">
@@ -193,10 +257,10 @@
             </p>
         </div>
         @*<div class="row">
-                <div class="col-md-12 footer__bottom">
-                    <span class="footer__bottom-content">Bản quyền thuộc về Dophuot365.com | Thiết kế bởi Thành Long</span>
-                </div>
-            </div>*@
+            <div class="col-md-12 footer__bottom">
+                <span class="footer__bottom-content">Bản quyền thuộc về Dophuot365.com | Thiết kế bởi Thành Long</span>
+            </div>
+        </div>*@
         <style>
             footer {
                 position: relative;
