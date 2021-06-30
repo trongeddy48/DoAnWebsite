@@ -7,21 +7,34 @@ using DoAnWeb.Models;
 
 namespace DoAnWeb.Controllers
 {
-    public class HomeController : Controller
+    public class GameProductController : Controller
     {
-        //Tao 1 doi tuong chua toan bo CSDL tu dbQLBanGame
+        // GET: GameProduct
+        //Doi tuong chua CSDL
         dbQLBanGameDataContext data = new dbQLBanGameDataContext();
 
         private List<tblSanPham> Laygamemoi(int count)
         {
-            //Sap xep giam dan theo ngay cap nhat
+            //Sap xep
             return data.tblSanPhams.OrderByDescending(a => a.NgayCapNhat).Take(count).ToList();
         }
         public ActionResult Index()
         {
-            //Lay 5 san pham moi nhat
+            //Lay hang
             var gamemoi = Laygamemoi(5);
             return View(gamemoi);
+        }
+
+        public ActionResult Loaisp()
+        {
+            var loaisp = from lsp in data.tblLoaiSanPhams select lsp;
+            return PartialView(loaisp);
+        }
+
+        public ActionResult SPTheotheloai(string id)
+        {
+            var game = from g in data.tblSanPhams where g.MaLoai==id select g;
+            return View(game);
         }
     }
 }

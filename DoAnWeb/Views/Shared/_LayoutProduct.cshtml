@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store K3T</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico" type="image/x-icon">
+
+    <!-- command -->
+    <script src="~/Content/js/jquery-3.3.1.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <link href="~/Content/fonts/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- css -->
+    <link href="~/Content/css/home.css" rel="stylesheet" />
+    <link href="~/Content/css/cart.css" rel="stylesheet" />
+    <link href="~/Content/css/contact.css" rel="stylesheet" />
+    <link href="~/Content/css/post.css" rel="stylesheet" />
+    <link href="~/Content/css/product.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <!-- owlcarousel -->
+    <link href="~/Content/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Content/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet" />
+    <script src="~/Content/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/Content/js/owl.js"></script>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+
+    <!-- Glidejs StyleSheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontawesome/fontawesome-free@5.15.3/css/fontawesome.min.css%22%3E" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css%22%3E" />
+</head>
+<body>
+    <!-- container -->
+    <div class="container">
+        <!-- menu top -->
+        <div class="row">
+            <div class="col-md-7 dtl-header">
+                <p class="text"><marquee>Game Store - Nơi cung cấp các sản phẩm Game chất lượng và tốt nhất. </marquee></p>
+            </div>
+            <div class="col-md-5 dtl-header">
+                <p class="text-1">Hỏi Đáp</p>
+                <p class="text-1">Hướng Dẫn</p>
+                <p class="text-1">Đăng ký</p>
+                <p class="text-1">Đăng nhập</p>
+            </div>
+        </div>
+        <!-- end menu top -->
+        <!-- menu bottom -->
+        <div class="row">
+            <div class="col-md-3 header__logo">
+                <a href="#" class="header__logo-link">
+                    <img src="~/Content/images/logogame.png" alt="Logo" class="header__logo-img">
+                </a>
+            </div>
+            <div class="col-md-6 header__search">
+                <select name="" id="" class="header__search-select">
+                    <option value="0">All</option>
+                    <option value="1">Sony Playstation</option>
+                    <option value="2">Microsoft Xbox</option>
+                    <option value="3">Nintendo</option>
+                    <option value="4">Đồ Công Nghệ</option>
+                </select>
+                <input type="text" class="header__search-input" placeholder="Tìm kiếm tại đây...">
+                <button class="header__search-btn">
+                    <div class="header__search-icon-wrap">
+                        <i class="fas fa-search header__search-icon"></i>
+                    </div>
+                </button>
+            </div>
+            <div class="col-md-2 header__call">
+                <div class="header__call-icon-wrap">
+                    <i class="fas fa-phone-alt header__call-icon"></i>
+                </div>
+                <div class="header__call-info">
+                    <div class="header__call-text">
+                        Gọi điện tư vấn
+                    </div>
+                    <div class="header__call-number">
+                        0352.860.701
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 header__cart">
+                <a href="cart.html">
+                    <span class="header__notice">0</span>
+                    <i class="fas fa-shopping-cart header__nav-cart-icon"></i>
+                </a>
+            </div>
+        </div>
+        <!-- end menu bottom -->
+        <div class="row">
+            <div class="col-md-3 header__nav-menu-wrap">
+                <i class="fas fa-bars header__nav-menu-icon"></i>
+                <div class="header__nav-menu-title">Danh mục sản phẩm</div>
+            </div>
+            <div class="col-md-9 header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        @Html.ActionLink("Trang chủ", "Index", "Home", null, new { @class = "colorTextAction" }) &emsp;
+                    </li>
+                    <li class="header__nav-item">
+                        @Html.ActionLink("Giới thiệu", "Index", "Introduction", null, new { @class = "colorTextAction" }) &emsp;
+                    </li>
+                    <li class="header__nav-item1">
+                        <!-- //giải thích đoạn code: ActionLink nó không truyền thẳng css vào được, cho nên sau 3 thuộc tính, tạo new theo cú pháp new { }, trỏ cái class tới vùng chọn css/-->
+                        @Html.ActionLink("Sản phẩm", "Index", "GameProduct", null, new { @class = "colorTextAction" }) &emsp;
+                    </li>
+                    <li class="header__nav-item">
+                        @Html.ActionLink("Bài viết", "Index", "Post", null, new { @class = "colorTextAction" }) &emsp;
+                    </li>
+                    <li class="header__nav-item">
+                        @Html.ActionLink("Liên hệ", "Index", "Contact", null, new { @class = "colorTextAction" })
+                    </li>
+                    <!-- css start -->
+                    <style>
+                        a.colorTextAction {
+                            color: #FFF;
+                            text-decoration: none;
+                        }
+
+                            a.colorTextAction:hover {
+                                background-color: #FFF;
+                                color: #000;
+                            }
+                    </style>
+                    <!-- css end -->
+                </ul>
+            </div>
+        </div>
+        @*<div class="row backroud">*@
+            @*<div class="col-md-3">*@
+                <div id="list-example" class="list-group">
+                    @Html.Action("Loaisp", "GameProduct")
+                    @*<a class="list-group-item list-group-item-action" href="#list-item-1">
+                        <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fab fa-playstation"></i></g></svg>
+                        <span class="text-2">PlayStation 5</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-2">
+                        <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fab fa-playstation"></i></g></svg>
+                        <span class="text-2">PlayStation 4</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-3">
+                        <svg class="menu__item-icon" viewBox="0 0 64 64" width="15" height="15"><g><i class="fab fa-xbox"></i></g></svg>
+                        <span class="text-2">Xbox Series X | S</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">
+                        <svg class="menu__item-icon" viewBox="0 0 512 512" width="15" height="15"><g><i class="fab fa-xbox"></i></g></svg>
+                        <span class="text-2">Xbox One | Xbox 360</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">
+                        <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 513.529 513.529" height="15" viewBox="0 0 513.529 513.529" width="15"><g><i class="fas fa-gamepad"></i></g></svg>
+                        <span class="text-2">Nintendo Switch</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">
+                        <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fas fa-gamepad"></i></g></svg>
+                        <span class="text-2">Nintendo Switch Lite</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">
+                        <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fab fa-steam"></i></g></svg>
+                        <span class="text-2">Game</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">
+                        <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="far fa-newspaper"></i></g></svg>
+                        <span class="text-2">Bản Tin</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">
+                        <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fas fa-keyboard"></i></g></svg>
+                        <span class="text-2">Phụ Kiện</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action" href="#list-item-4">
+                        <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fas fa-tools"></i></g></svg>
+                        <span class="text-2">Sửa Chữa</span>
+                    </a>*@
+                </div>
+            @*</div>*@
+        @*</div>*@
+            @RenderBody()
+            <!-- end post -->
+            <!-- Regester start-->
+            <section class="newsletter-area spad">
+                <div class="container">
+                    <form method="post" action="#">
+                        <p>
+                            Đăng kí nhận tin để nhận được nhiều phần
+                            quà hấp dẫn của Game Store GOD.
+                        </p>
+                        <div class="row subscribe-sec">
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" id="email"
+                                       name="email" placeholder="Nhập Email của bạn..."
+                                       required="" />
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn submit">
+                                    Đăng ký
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <style>
+                .newsletter-area {
+                    background-color: #f4f4f4;
+                }
+
+                    .newsletter-area form {
+                        margin: 0 auto;
+                        width: 60%;
+                    }
+
+                    .newsletter-area p {
+                        font-size: 15px;
+                        margin-bottom: 15px;
+                        color: #000;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-top: 35px;
+                    }
+
+                .subscribe-sec input {
+                    padding: 12px;
+                    color: #495057;
+                    font-size: 15px;
+                    border: none;
+                    outline: none;
+                    letter-spacing: -1px;
+                    box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
+                }
+
+                .btn.submit {
+                    background-color: #ff7200;
+                    color: #fff;
+                    padding: 12px 20px;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    letter-spacing: 2px;
+                    font-weight: 400;
+                    box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
+                    transition: all 0.3s;
+                }
+            </style>
+            <div class="clear-space" style="margin-bottom: 15px;"></div>
+            <!-- Regester end-->
+            <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="1" data-width="500" data-height="550"></div>
+
+            <!-- footer -->
+            <footer>
+                <div class="container">
+                    <div class="sec aboutus">
+                        <h2>Giới thiệu</h2>
+                        <p>
+                            Game Store K3T - Gameshop for Gamer
+                            Được thành lập vào năm 2021, GameStoreK3T đã gắn liền trong ký ức tuổi thơ biết bao thế hệ game thủ Việt Nam.
+                            Shop chuyên kinh doanh dòng sản phẩm máy game lẫn phụ kiện từ Playstation, Nintendo, Xbox...
+                        </p>
+                        <ul class="sci">
+                            <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="sec quickLinks">
+                        <h2>Liên kết</h2>
+                        <ul>
+                            <li><a href="#">Quy định & chính sách</a></li>
+                            <li><a href="#">Chính sách trả góp</a></li>
+                            <li><a href="#">Vận chuyển & giao hàng</a></li>
+                            <li><a href="#">Chính sách bảo hàng</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                        </ul>
+                    </div>
+                    <div class="sec contact">
+                        <h2>Thông tin liên hệ</h2>
+                        <ul class="info">
+                            <li>
+                                <span><i class="fas fa-map-signs"></i></span>
+                                <span>
+                                    26/3, Đường Phan Chu Trinh<br />
+                                    P. Hiệp Phú, Quận 9, TP.HCM
+                                </span>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-phone"></i></span>
+                                <p>
+                                    <a href="tel:1234567890">+84 374 4121 99</a><br />
+                                    <a href="tel:1234567890">+84 345 4398 77</a>
+                                </p>
+                            </li>
+                            <li>
+                                <span><i class="fas fa-envelope-open-text"></i></span>
+                                <p><a href="mailto:knowmore@gmail.com">gamestoreK3T@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            <div class="copyrightText">
+                <p>
+                    Copyright 2021 Online <br />
+                    FROM GAMESTOREK3T WITH LOVE
+                </p>
+            </div>
+            @*<div class="row">
+                <div class="col-md-12 footer__bottom">
+                    <span class="footer__bottom-content">Bản quyền thuộc về Dophuot365.com | Thiết kế bởi Thành Long</span>
+                </div>
+            </div>*@
+            <style>
+                footer {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    padding: 50px 100px;
+                    background: #111;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+
+                    footer .container {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                    }
+
+                        footer .container .sec {
+                            margin-right: 30px;
+                        }
+
+                            footer .container .sec.aboutus {
+                                width: 30%;
+                            }
+
+                        footer .container h2 {
+                            padding-left: 16%;
+                            color: #fff;
+                            font-size: 24px;
+                            margin-bottom: 15px;
+                        }
+
+                            footer .container h2:before {
+                                content: '';
+                                position: absolute;
+                                bottom: -5px;
+                                left: 0;
+                                width: 40px;
+                                height: 2px;
+                            }
+
+                    footer p {
+                        color: #999;
+                    }
+
+                .sci {
+                    margin-top: 20px;
+                    display: flex;
+                }
+
+                    .sci li {
+                        list-style: none;
+                    }
+
+                        .sci li a {
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            background: #222;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-right: 10px;
+                            text-decoration: none;
+                            border-radius: 4px;
+                        }
+
+                            .sci li a:hover {
+                                background: #f00;
+                            }
+
+                            .sci li a .fa {
+                                color: #fff;
+                                font-size: 20px;
+                            }
+
+                .quickLinks {
+                    position: relative;
+                    width: 25%;
+                }
+
+                    .quickLinks ul li {
+                        list-style: none;
+                    }
+
+                        .quickLinks ul li a {
+                            color: #999;
+                            text-decoration: none;
+                            margin-bottom: 10px;
+                            display: inline-block;
+                        }
+
+                            .quickLinks ul li a:hover {
+                                color: #fff;
+                            }
+
+                .contact {
+                    width: calc(35% - 60px);
+                    margin-right: 0 !important;
+                }
+
+                    .contact .info li {
+                        display: flex;
+                        margin-bottom: 16px;
+                    }
+
+                        .contact .info li span:nth-child(1) {
+                            color: #fff;
+                            font-size: 20px;
+                            margin-right: 10px;
+                        }
+
+                        .contact .info li span {
+                            color: #999;
+                        }
+
+                        .contact .info li a {
+                            color: #999;
+                            text-decoration: none;
+                        }
+
+                            .contact .info li a:hover {
+                                color: #fff;
+                            }
+
+                .copyrightText {
+                    width: 100%;
+                    background: #181818;
+                    padding: 8px 100px;
+                    text-align: center;
+                    color: #999;
+                }
+            </style>
+            <!-- end footer -->
+        </div>
+        <div class="container">
+            <div class="main"></div>
+        </div>
+        <div id="go-top"><i class="fas fa-arrow-up"></i></div>
+        <style>
+            #go-top {
+                display: none;
+                font-size: 25px;
+                position: fixed;
+                bottom: 70px;
+                right: 50px;
+                border: 2px solid #000;
+                border-radius: 5px;
+                width: 30px;
+                height: 30px;
+                line-height: 25px;
+                text-align: center;
+                cursor: pointer;
+            }
+        </style>
+        <!-- end container -->
+        <!-- Glidejs Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+        <script src="~/Content/js/slider.js"></script>
+        <script>
+            (function ($, window, document) {
+                $.fn.goTop = function (options) {
+                    var defaults = {
+                        scrollTop: 100,
+                        scrollSpeed: 1000,
+                        fadeInSpeed: 1000,
+                        fadeOutSpeed: 500
+                    };
+
+                    var options = $.extend(defaults, options);
+                    var $this = $(this);
+                    $(window).on('scroll', function () {
+                        if ($(window).scrollTop() > options.scrollTop) {
+                            $this.fadeIn(options.fadeInSpeed);
+                        } else {
+                            $this.fadeOut(options.fadeOutSpeed);
+                        }
+                    })
+                    $this.on('click', function () {
+                        $('html,body').animate({
+                            'scrollTop': 0
+                        }, options.speed)
+                    })
+                }
+            })(jQuery, window, document)
+            $('#go-top').goTop({
+                scrollTop: 100,
+                scrollSpeed: 1000,
+                fadeInSpeed: 1000,
+                fadeOutSpeed: 500
+            })
+        </script>
+</body>
+</html>
