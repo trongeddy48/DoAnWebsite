@@ -1775,12 +1775,22 @@
     <Content Include="Content\fonts\fontawesome\webfonts\fa-brands-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-solid-900.svg" />
-    <Content Include="Content\HinhSanPham\game1.jpg" />
+    <Content Include="Content\HinhSanPham\cc1.jpg" />
+    <Content Include="Content\HinhSanPham\cc2.jpg" />
+    <Content Include="Content\HinhSanPham\cc3.jpg" />
+    <Content Include="Content\HinhSanPham\cc4.jpg" />
+    <Content Include="Content\HinhSanPham\cc5.jpg" />
+    <Content Include="Content\HinhSanPham\cl1.jpg" />
+    <Content Include="Content\HinhSanPham\cl10.jpg" />
+    <Content Include="Content\HinhSanPham\cl2.jpg" />
+    <Content Include="Content\HinhSanPham\cl3.jpg" />
+    <Content Include="Content\HinhSanPham\cl4.jpg" />
+    <Content Include="Content\HinhSanPham\cl5.jpg" />
+    <Content Include="Content\HinhSanPham\cl6.jpg" />
+    <Content Include="Content\HinhSanPham\cl7.jpg" />
+    <Content Include="Content\HinhSanPham\cl8.jpg" />
+    <Content Include="Content\HinhSanPham\cl9.jpg" />
     <Content Include="Content\HinhSanPham\game10.jpg" />
-    <Content Include="Content\HinhSanPham\game2.jpg" />
-    <Content Include="Content\HinhSanPham\game3.jpg" />
-    <Content Include="Content\HinhSanPham\game4.jpg" />
-    <Content Include="Content\HinhSanPham\game5.jpg" />
     <Content Include="Content\HinhSanPham\game6.jpg" />
     <Content Include="Content\HinhSanPham\game7.jpg" />
     <Content Include="Content\HinhSanPham\game8.jpg" />
@@ -1790,16 +1800,6 @@
     <Content Include="Content\HinhSanPham\lite3.jpg" />
     <Content Include="Content\HinhSanPham\lite4.jpg" />
     <Content Include="Content\HinhSanPham\lite5.jpg" />
-    <Content Include="Content\HinhSanPham\pk1.jpg" />
-    <Content Include="Content\HinhSanPham\pk10.jpg" />
-    <Content Include="Content\HinhSanPham\pk2.jpg" />
-    <Content Include="Content\HinhSanPham\pk3.jpg" />
-    <Content Include="Content\HinhSanPham\pk4.jpg" />
-    <Content Include="Content\HinhSanPham\pk5.jpg" />
-    <Content Include="Content\HinhSanPham\pk6.jpg" />
-    <Content Include="Content\HinhSanPham\pk7.jpg" />
-    <Content Include="Content\HinhSanPham\pk8.jpg" />
-    <Content Include="Content\HinhSanPham\pk9.jpg" />
     <Content Include="Content\HinhSanPham\pro1.jpg" />
     <Content Include="Content\HinhSanPham\pro2.jpg" />
     <Content Include="Content\HinhSanPham\pro3.jpg" />
@@ -2072,6 +2072,7 @@
     <Content Include="Views\GameProduct\Index.cshtml" />
     <Content Include="Views\GameProduct\Loaisp.cshtml" />
     <Content Include="Views\GameProduct\SPTheotheloai.cshtml" />
+    <Content Include="Views\GameProduct\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
