@@ -126,6 +126,7 @@
     <Compile Include="Controllers\GameProductController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IntroductionController.cs" />
+    <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1854,11 +1855,7 @@
     <Content Include="Content\images\banner7.jpg" />
     <Content Include="Content\images\banner8.jpg" />
     <Content Include="Content\images\banner9.jpg" />
-    <Content Include="Content\images\banner_5.jpg" />
-    <Content Include="Content\images\banner_6.jpg" />
-    <Content Include="Content\images\banner_7.jpg" />
     <Content Include="Content\images\bestselling.png" />
-    <Content Include="Content\images\bg_sale_off.jpg" />
     <Content Include="Content\images\blog1.jpg" />
     <Content Include="Content\images\blog2.jpg" />
     <Content Include="Content\images\blog3.jpg" />
@@ -1887,13 +1884,9 @@
     <Content Include="Content\images\hinh2.jpg" />
     <Content Include="Content\images\hinh3.jpg" />
     <Content Include="Content\images\less.png" />
-    <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\logogame.png" />
     <Content Include="Content\images\newilove.jpg" />
     <Content Include="Content\images\phone_top.png" />
-    <Content Include="Content\images\post_1.jpg" />
-    <Content Include="Content\images\post_2.jpg" />
-    <Content Include="Content\images\post_3.jpg" />
     <Content Include="Content\images\pro1.jpg" />
     <Content Include="Content\images\pro2.jpg" />
     <Content Include="Content\images\pro3.jpg" />
@@ -1902,24 +1895,6 @@
     <Content Include="Content\images\pro6.jpg" />
     <Content Include="Content\images\pro7.jpg" />
     <Content Include="Content\images\pro8.jpg" />
-    <Content Include="Content\images\product_1.png" />
-    <Content Include="Content\images\product_10.png" />
-    <Content Include="Content\images\product_11.png" />
-    <Content Include="Content\images\product_12.png" />
-    <Content Include="Content\images\product_13.png" />
-    <Content Include="Content\images\product_14.jpg" />
-    <Content Include="Content\images\product_15.jpg" />
-    <Content Include="Content\images\product_16.jpg" />
-    <Content Include="Content\images\product_16.png" />
-    <Content Include="Content\images\product_17.jpg" />
-    <Content Include="Content\images\product_2.png" />
-    <Content Include="Content\images\product_3.png" />
-    <Content Include="Content\images\product_4.png" />
-    <Content Include="Content\images\product_5.png" />
-    <Content Include="Content\images\product_6.png" />
-    <Content Include="Content\images\product_7.png" />
-    <Content Include="Content\images\product_8.png" />
-    <Content Include="Content\images\product_9.png" />
     <Content Include="Content\images\ps4.png" />
     <Content Include="Content\images\ps5ads.jpg" />
     <Content Include="Content\images\sanpham1.jpg" />
@@ -1951,6 +1926,7 @@
     <Content Include="Content\images\Tintuc9.jpg" />
     <Content Include="Content\images\UBSoft.png" />
     <Content Include="Content\images\xbox.png" />
+    <Content Include="Content\images\xboxbnlog.jpg" />
     <Content Include="Content\images\xboxxads.jpg" />
     <Content Include="Content\images\youtube.png" />
     <Content Include="Content\images\zalo.png" />
@@ -2073,6 +2049,7 @@
     <Content Include="Views\GameProduct\Loaisp.cshtml" />
     <Content Include="Views\GameProduct\SPTheotheloai.cshtml" />
     <Content Include="Views\GameProduct\Details.cshtml" />
+    <Content Include="Views\NguoiDung\Dangky.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
