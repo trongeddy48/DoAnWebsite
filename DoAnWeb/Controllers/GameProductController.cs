@@ -18,6 +18,7 @@ namespace DoAnWeb.Controllers
             //Sap xep
             return data.tblSanPhams.OrderByDescending(a => a.NgayCapNhat).Take(count).ToList();
         }
+
         public ActionResult Index()
         {
             //Lay hang

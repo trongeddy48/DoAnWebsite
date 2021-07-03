@@ -73,11 +73,63 @@ namespace DoAnWeb.Controllers
             List<Giohang> lstGiohang = Laygiohang();
             if(lstGiohang.Count == 0)
             {
-                return RedirectToAction("Index, BookStore");
+                return RedirectToAction("Index", "GameProduct");
             }
             ViewBag.Tongsoluong = TongSoLuong();
             ViewBag.Tongtien = Tongtien();
             return View(lstGiohang);
+        }
+
+        //Tao Partial view
+        public ActionResult GiohangPartial()
+        {
+            ViewBag.Tongsoluong = TongSoLuong();
+            ViewBag.Tongtien = Tongtien();
+            return PartialView();
+        }
+
+        //Xoa Giohang
+        public ActionResult XoaGiohang (string iMaSP)
+        {
+            //Lay giohang tu session
+            List<Giohang> lstGiohang = Laygiohang();
+            //Kiem tra hang co trong session
+            Giohang sanpham = lstGiohang.SingleOrDefault(n => n.iMaSP == iMaSP);
+            //Neu co cho sua soluong
+            if(sanpham != null)
+            {
+                lstGiohang.RemoveAll(n => n.iMaSP == iMaSP);
+                return RedirectToAction("GioHang");
+            }
+            if(lstGiohang.Count == 0)
+            {
+                return RedirectToAction("Index", "GameProduct");
+            }
+            return RedirectToAction("GioHang");
+        }
+
+        //Cap nhat giohang
+        public ActionResult CapnhatGiohang (string iMaSP, FormCollection f)
+        {
+            //Lay giohang tu session
+            List<Giohang> lstGiohang = Laygiohang();
+            //Kiem tra hang co trong session
+            Giohang sanpham = lstGiohang.SingleOrDefault(n => n.iMaSP == iMaSP);
+            //Neu ton tai thi cho sua soluong
+            if(sanpham != null)
+            {
+                sanpham.iSoLuong = int.Parse(f["txtSoluong"].ToString());
+            }
+            return RedirectToAction("Giohang");
+        }
+
+        //Xoa Gio hang
+        public ActionResult XoaTatcaGiohang()
+        {
+            //Lay giohang tu Session
+            List<Giohang> lstGiohang = Laygiohang();
+            lstGiohang.Clear();
+            return RedirectToAction("Index", "GameProduct");
         }
     }
 }

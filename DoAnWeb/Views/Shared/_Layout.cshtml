@@ -138,7 +138,16 @@
                         @Html.ActionLink("Bài viết", "Index", "Post", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
-                        @Html.ActionLink("Liên hệ", "Index", "Contact", null, new { @class = "colorTextAction" })
+                        @Html.ActionLink("Liên hệ", "Index", "Contact", null, new { @class = "colorTextAction" }) &emsp;
+                    </li>
+                    <li class="headernav-item">
+                        @Html.ActionLink("Đăng ký", "Dangky", "Nguoidung", null, new { @class = "colorTextAction" }) &emsp;
+                    </li>
+                    <li class="headernav-item">
+                        @Html.ActionLink("Đăng nhập", "Dangnhap", "Nguoidung", null, new { @class = "colorTextAction" }) &emsp;
+                    </li>
+                    <li class="header__nav-item">
+                        @Html.Action("GiohangPartial", "Giohang")
                     </li>
                     <!-- css start -->
                     <style>

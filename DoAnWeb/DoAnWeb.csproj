@@ -1910,6 +1910,7 @@
     <Content Include="Content\images\sanpham8.jpg" />
     <Content Include="Content\images\sanpham9.jpg" />
     <Content Include="Content\images\shipper.png" />
+    <Content Include="Content\images\shopping-cart.png" />
     <Content Include="Content\images\steam.png" />
     <Content Include="Content\images\switchads.jpg" />
     <Content Include="Content\images\team1.jpg" />
@@ -2054,6 +2055,7 @@
     <Content Include="Views\NguoiDung\Dangky.cshtml" />
     <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
     <Content Include="Views\Giohang\Giohang.cshtml" />
+    <Content Include="Views\Giohang\GiohangPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
