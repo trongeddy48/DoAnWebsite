@@ -2056,6 +2056,7 @@
     <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
     <Content Include="Views\Giohang\Giohang.cshtml" />
     <Content Include="Views\Giohang\GiohangPartial.cshtml" />
+    <Content Include="Views\Giohang\DatHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

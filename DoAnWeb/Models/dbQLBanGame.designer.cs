@@ -69,7 +69,7 @@ namespace DoAnWeb.Models
     #endregion
 		
 		public dbQLBanGameDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["WebsiteGameStore_FixConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["WebsiteGameStore_FixConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

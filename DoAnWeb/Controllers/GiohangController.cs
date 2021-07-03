@@ -131,5 +131,26 @@ namespace DoAnWeb.Controllers
             lstGiohang.Clear();
             return RedirectToAction("Index", "GameProduct");
         }
+
+        //Hien thi View DatHang de cap nhat cac thong tin cho Don hang 
+        [HttpGet]
+        public ActionResult DatHang()
+        {
+            //kiem tra dang nhap 
+            if (Session["Taikhoan"] == null || Session["Taikhoan"].ToString() == "")
+            {
+                return RedirectToAction("Dangnhap", "Nguoidung");
+            }
+            if (Session["Giohang"] == null)
+            {
+                return RedirectToAction("Index", "BookStore");
+            }
+            //Lay gio hang tu Session 
+            List<Giohang> lstGiohang = Laygiohang();
+            ViewBag.Tongsoluong = TongSoLuong();
+            ViewBag.Tongtien = Tongtien();
+
+            return View(lstGiohang);
+        }
     }
 }
