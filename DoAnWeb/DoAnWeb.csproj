@@ -124,6 +124,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\GameProductController.cs" />
+    <Compile Include="Controllers\GiohangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IntroductionController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
@@ -137,6 +138,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbQLBanGame.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Giohang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2050,6 +2052,8 @@
     <Content Include="Views\GameProduct\SPTheotheloai.cshtml" />
     <Content Include="Views\GameProduct\Details.cshtml" />
     <Content Include="Views\NguoiDung\Dangky.cshtml" />
+    <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
+    <Content Include="Views\Giohang\Giohang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

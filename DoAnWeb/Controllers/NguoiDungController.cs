@@ -65,6 +65,10 @@ namespace DoAnWeb.Controllers
             else
             {
                 //gán giá trị cho đối tượng được tạo mới (kh)
+                string min = DateTime.Now.ToString("mm");
+                string sec = DateTime.Now.ToString("ss");
+                string MaKhachHang = "K" + "" + min + "" + sec;
+                kh.MaKH = MaKhachHang;
                 kh.TenKH = hoten;
                 kh.Username = tendn;
                 kh.Password = matkhau;
@@ -76,6 +80,41 @@ namespace DoAnWeb.Controllers
                 return RedirectToAction("Dangnhap");
             }
             return this.Dangky();
+        }
+
+        [HttpGet]
+        public ActionResult Dangnhap()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Dangnhap(FormCollection collection)
+        {
+            //Gán giá trị ng dùng
+            var tendn = collection["TenDN"];
+            var matkhau = collection["Matkhau"];
+            if(String.IsNullOrEmpty(tendn))
+            {
+                ViewData["Loi1"] = "Phải nhập tên đăng nhập";
+            }
+            else if(String.IsNullOrEmpty(matkhau))
+            {
+                ViewData["Loi2"] = "Phải nhập mật khẩu";
+            }
+            else
+            {
+                //Gán giá trị cho đối tượng tạo mới (kh)
+                tblKhacHang kh = db.tblKhacHangs.SingleOrDefault(n => n.Username == tendn && n.Password == matkhau);
+                if (kh != null)
+                {
+                    ViewBag.Thongbao = "Đăng nhập thành công !";
+                    Session["Taikhoan"] = kh;
+                }
+                else
+                    ViewBag.Thongbao = "Tên đăng nhập hoặc mật khẩu không đúng !";
+            }
+            return View();
         }
     }
 }
