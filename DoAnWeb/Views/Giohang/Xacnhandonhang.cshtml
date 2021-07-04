@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Xacnhandonhang";
+    Layout = "~/Views/Shared/_LayoutProduct.cshtml";
+}
+
+<h2 style="font-size:23px;text-align:center;position:absolute;width:39%;margin-left:17%;top:22%">
+    Đơn hàng của quý khách đã được chúng tôi ghi nhận. Chúng tôi sẽ liên hệ quý khách trong thời gian sớm nhất và giao hàng đúng hẹn!
+</h2>
+<img src="~/Content/images/confirm-shop.jpg" style="position:absolute;margin-left:17%;width:40%;height:50%; top:29%" />
+<p style="background-color:orange;width:10%;text-align:center;border-radius:5px;position:absolute;margin-left:32%; top:80%">
+    @Html.ActionLink("VỀ TRANG SẢN PHẨM", "Index", "GameProduct")
+    <style>
+        a.colorAction {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</p>
+<div class="space" style="margin-bottom: 390px"></div>

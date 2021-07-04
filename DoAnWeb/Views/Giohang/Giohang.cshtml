@@ -4,8 +4,8 @@
     ViewBag.Title = "Giohang";
     Layout = "~/Views/Shared/_LayoutProduct.cshtml";
 }
-<h2 style="text-align:center">THÔNG TIN GIỎ HÀNG</h2>
-<table align="center" border="1">
+<h3 style="text-align: center;top: 20%;position: absolute;left: 51%;">Thông Tin Giỏ Hàng</h3>
+<table align="center" border="1" style="position:absolute; margin-left:13.9%;width:45.3%;top:27%" />
     <tr style="text-align:center; font-weight:bold">
         <td> Mã Sản Phẩm </td>
         <td> Tên Sản Phẩm </td>
@@ -22,7 +22,7 @@
         <tr style="text-align:center; font-weight:bold">
             <td> @item.iMaSP </td>
             <td> @item.sTenSP </td>
-            <td><img src="~/Content/HinhSanPham/@item.sHinhAnh" /></td>
+            <td><img class="product__panel-img" src="~/Content/HinhSanPham/@item.sHinhAnh" /></td>
             @using (Html.BeginForm("CapnhatGiohang", "Giohang", new { @iMaSP = item.iMaSP }))
             {
                 <td>
@@ -37,7 +37,7 @@
         </tr>
     }
     <tr style="font-weight:bold; text-align:right; color:red">
-        <td colspan="4"> Số lượng sách: @ViewBag.Tongsoluong </td>
+        <td colspan="4"> Số lượng sản phẩm: @ViewBag.Tongsoluong </td>
         <td colspan="5"> Tổng tiền: @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ </td>
     </tr>
     <tr style="font-weight:bold; color:blue; text-align:right">
@@ -51,4 +51,5 @@
         </td>
     </tr>
 </table>
+<div class="space" style="margin-bottom: 500px"></div>
 

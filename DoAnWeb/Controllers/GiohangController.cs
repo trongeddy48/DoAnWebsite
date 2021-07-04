@@ -152,5 +152,42 @@ namespace DoAnWeb.Controllers
 
             return View(lstGiohang);
         }
+
+        public ActionResult DatHang(FormCollection collection)
+        {
+            tblDonHang dh = new tblDonHang();
+            tblKhacHang kh = (tblKhacHang)Session["Taikhoan"];
+            List<Giohang> gh = Laygiohang();
+            string min = DateTime.Now.ToString("mm");
+            string sec = DateTime.Now.ToString("ss");
+            string MaDonHang = "D" + "" + min + "" + sec;
+            dh.MaDH = MaDonHang;
+            dh.MaKH = kh.MaKH;
+            dh.NgayLap = DateTime.Now;
+            var ngaygiao = String.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
+            dh.NgayGiao = DateTime.Parse(ngaygiao);
+            dh.TinhTrangGiaoHang = false;
+            dh.Dathanhtoan = false;
+            data.tblDonHangs.InsertOnSubmit(dh);
+            data.SubmitChanges();
+            //Them chitiet donhang
+            foreach(var item in gh)
+            {
+                tblChiTietDonHang ctdh = new tblChiTietDonHang();
+                ctdh.MaDH = dh.MaDH;
+                ctdh.MaSP = item.iMaSP;
+                ctdh.SoLuong = item.iSoLuong;
+                ctdh.DonGia = (decimal)item.dDonGia;
+                ctdh.MaKH = dh.MaKH;
+                data.tblChiTietDonHangs.InsertOnSubmit(ctdh);
+            }
+            data.SubmitChanges();
+            Session["Giohang"] = null;
+            return RedirectToAction("Xacnhandonhang", "Giohang");
+        }
+        public ActionResult Xacnhandonhang()
+        {
+            return View();
+        }
     }
 }

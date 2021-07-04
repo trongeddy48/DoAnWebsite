@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DoAnWeb.Models;
+//using PagedList;
+//using PagedList.Mvc;
 
 namespace DoAnWeb.Controllers
 {
@@ -18,6 +20,14 @@ namespace DoAnWeb.Controllers
             //Sap xep
             return data.tblSanPhams.OrderByDescending(a => a.NgayCapNhat).Take(count).ToList();
         }
+
+        //public ActionResult Index(int ? page)
+        //{
+        //    //Tao bien sanpham quy dinh tren trang
+        //    int pageSize = 30;
+        //    //Tao bien so trang
+        //    int pageNum = (page ?? 1);
+        //}
 
         public ActionResult Index()
         {
