@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\GameProductController.cs" />
@@ -1946,6 +1947,7 @@
     <Content Include="Content\js\owl.js" />
     <Content Include="Content\js\slider.js" />
     <Content Include="Content\js\vue.js" />
+    <Content Include="Content\login_admin_img.jpg" />
     <Content Include="Content\owlcarousel\assets\ajax-loader.gif" />
     <Content Include="Content\owlcarousel\assets\owl.carousel.css" />
     <Content Include="Content\owlcarousel\assets\owl.carousel.min.css" />
@@ -1957,7 +1959,9 @@
     <Content Include="Content\owlcarousel\owl.carousel.js" />
     <Content Include="Content\owlcarousel\owl.carousel.min.js" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\video\video.mp4" />
+    <Content Include="Content\xboxbnlog.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -2066,6 +2070,7 @@
     <Content Include="Views\Giohang\GiohangPartial.cshtml" />
     <Content Include="Views\Giohang\DatHang.cshtml" />
     <Content Include="Views\Giohang\Xacnhandonhang.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
