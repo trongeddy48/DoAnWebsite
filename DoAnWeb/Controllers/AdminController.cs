@@ -96,6 +96,10 @@ namespace DoAnWeb.Controllers
                     //Luu duong dan
                     var path = Path.Combine(Server.MapPath("~/Content/HinhSanPham"), fileName);
                     //Kiem tra hinh da ton tai chua
+                    string min = DateTime.Now.ToString("mm");
+                    string sec = DateTime.Now.ToString("ss");
+                    string MaSanPham = "S" + "" + min + "" + sec;
+                    sanPham.MaSP = MaSanPham;
                     if (System.IO.File.Exists(path))
                     {
                         ViewBag.Thongbao = "Hình ảnh đã tồn tại !";
