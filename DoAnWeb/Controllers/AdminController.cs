@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DoAnWeb.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace DoAnWeb.Controllers
 {
@@ -14,6 +16,14 @@ namespace DoAnWeb.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Game(int ?page)
+        {
+            int pageNumber = (page ?? 1);
+            int pageSize = 7;
+            //return View(db.tblSanPhams.ToList());
+            return View(db.tblSanPhams.ToList().OrderBy(n => n.MaSP).ToPagedList(pageNumber, pageSize));
         }
 
         [HttpGet]
