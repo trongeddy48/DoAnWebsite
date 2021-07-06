@@ -1,0 +1,90 @@
+﻿@model DoAnWeb.Models.tblSanPham
+
+@{
+    ViewBag.Title = "ChitietSP";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>THÔNG TIN CHI TIẾT SẢN PHẨM</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            Giá tiền:
+        </dt>
+
+        <dd>
+            @String.Format("{0:0,0}", Model.GiaTien) VNĐ
+        </dd>
+
+        <dt>
+           Số lượng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            Ngày cập nhật:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.NgayCapNhat)
+        </dd>
+
+        <dt>
+            Hình ảnh:
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/Content/HinhSanPham/" + Model.HinhAnh)" width="450px"/>
+        </dd>
+
+        <dt>
+            Mô tả:
+        </dt>
+
+        <dd style="width:600px; text-align:justify">
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+        <dt>
+            Mã nhà cung cấp:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNCC)
+        </dd>
+
+        <dt>
+            Mã thương hiệu:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaTH)
+        </dd>
+
+        <dt>
+            Mã loại:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLoai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("CHỈNH SỬA", "SuaSP", new { id = Model.MaSP }) |
+    @Html.ActionLink("TRỞ VỀ", "Game")
+</p>

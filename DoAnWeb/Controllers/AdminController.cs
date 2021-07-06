@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using DoAnWeb.Models;
 using PagedList;
 using PagedList.Mvc;
+using System.IO;
 
 namespace DoAnWeb.Controllers
 {
@@ -60,6 +61,157 @@ namespace DoAnWeb.Controllers
                     ViewBag.Thongbao = "Tên đăng nhập hoặc mật khẩu không đúng";
             }
             return View();
+        }
+        
+        [HttpGet]
+        public ActionResult ThemmoiSP()
+        {
+            //Dua data vao dropdownlist
+            ViewBag.MaNCC = new SelectList(db.tblNhaCungCaps.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC");
+            ViewBag.MaTH = new SelectList(db.tblThuongHieus.ToList().OrderBy(n => n.TenTH), "MaTH", "TenTH");
+            ViewBag.MaLoai = new SelectList(db.tblLoaiSanPhams.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult ThemmoiSP(tblSanPham sanPham, HttpPostedFileBase fileupload)
+        {
+            //Dua du lieu vao dropdownload
+            ViewBag.MaNCC = new SelectList(db.tblNhaCungCaps.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC");
+            ViewBag.MaTH = new SelectList(db.tblThuongHieus.ToList().OrderBy(n => n.TenTH), "MaTH", "TenTH");
+            ViewBag.MaLoai = new SelectList(db.tblLoaiSanPhams.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
+            //Kiem tra duong dan file
+            if(fileupload == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn ảnh sản phẩm !";
+                return View();
+            }
+            //Them vao csdl
+            else
+            {
+                if(ModelState.IsValid)
+                {
+                    var fileName = Path.GetFileName(fileupload.FileName);
+                    //Luu duong dan
+                    var path = Path.Combine(Server.MapPath("~/Content/HinhSanPham"), fileName);
+                    //Kiem tra hinh da ton tai chua
+                    if (System.IO.File.Exists(path))
+                    {
+                        ViewBag.Thongbao = "Hình ảnh đã tồn tại !";
+                    }
+                    else
+                    {
+                        //Luu hinh vao duong dan
+                        fileupload.SaveAs(path);
+                    }
+                    sanPham.HinhAnh = fileName;
+                    //Luu vao csdl
+                    db.tblSanPhams.InsertOnSubmit(sanPham);
+                    db.SubmitChanges();
+                }
+                return RedirectToAction("Game");
+            }
+        }
+
+        //Edit sp
+        [HttpGet]
+        public ActionResult SuaSP(string id)
+        {
+            tblSanPham sanPham = db.tblSanPhams.SingleOrDefault(n => n.MaSP == id);
+            if(sanPham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            ViewBag.MaNCC = new SelectList(db.tblNhaCungCaps.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC", sanPham.MaNCC);
+            ViewBag.MaTH = new SelectList(db.tblThuongHieus.ToList().OrderBy(n => n.TenTH), "MaTH", "TenTH", sanPham.MaTH);
+            ViewBag.MaLoai = new SelectList(db.tblLoaiSanPhams.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai", sanPham.MaLoai);
+            return View(sanPham);
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult SuaSP(tblSanPham sanPham, HttpPostedFileBase fileUpload)
+        {
+            ViewBag.MaNCC = new SelectList(db.tblNhaCungCaps.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC");
+            ViewBag.MaTH = new SelectList(db.tblThuongHieus.ToList().OrderBy(n => n.TenTH), "MaTH", "TenTH");
+            ViewBag.MaLoai = new SelectList(db.tblLoaiSanPhams.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
+            //Kiem tra duong dan
+            if(fileUpload == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn hình ảnh !";
+                return View();
+            }
+            else
+            {
+                if(ModelState.IsValid)
+                {
+                    var fileName = Path.GetFileName(fileUpload.FileName);
+                    //Luu duong dan
+                    var path = Path.Combine(Server.MapPath("~/Content/HinhSanPham"), fileName);
+                    //Kiem tra hinh da ton tai chua
+                    if (System.IO.File.Exists(path))
+                    {
+                        ViewBag.Thongbao = "Hình ảnh đã tồn tại !";
+                    }
+                    else
+                    {
+                        //Luu hinh vao duong dan
+                        fileUpload.SaveAs(path);
+                    }
+                    sanPham.HinhAnh = fileName;
+                    //Luu vao csdl
+                    UpdateModel(sanPham);
+                    db.SubmitChanges();
+                }
+                return RedirectToAction("Game");
+            }
+        }
+
+        //Hien thi san pham
+        public ActionResult ChitietSP(string id)
+        {
+            //Lay sp theo ma
+            tblSanPham sanPham = db.tblSanPhams.SingleOrDefault(n => n.MaSP == id);
+            ViewBag.MaSP = sanPham.MaSP;
+            if(sanPham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(sanPham);
+        }
+
+        //Xoa sp
+        [HttpGet]
+        public ActionResult XoaSP(string id)
+        {
+            //Lay ra sp can xoa theo ma~
+            tblSanPham sanPham = db.tblSanPhams.SingleOrDefault(n => n.MaSP == id);
+            ViewBag.MaSP = sanPham.MaSP;
+            if(sanPham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(sanPham);
+        }
+
+        [HttpPost, ActionName("XoaSP")]
+        public ActionResult Xacnhanxoa(string id)
+        {
+            //Lay sp can xoa theo ma~
+            tblSanPham sanPham = db.tblSanPhams.SingleOrDefault(n => n.MaSP == id);
+            ViewBag.MaSP = sanPham.MaSP;
+            if(sanPham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            db.tblSanPhams.DeleteOnSubmit(sanPham);
+            db.SubmitChanges();
+            return RedirectToAction("Game");
         }
     }
 }
