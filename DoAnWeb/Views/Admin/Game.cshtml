@@ -19,23 +19,20 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2> QUẢN LÝ THÔNG TIN SẢN PHẨM </h2>
+<h2 style="text-align:center">Quản Lý Thông Tin Sản Phẩm</h2>
 
-<p>
-    @Html.ActionLink("Thêm mới", "ThemmoiSP")
-</p>
 <table class="table" border="1">
     <tr>
-        <th style="width:200px"> Tên sách </th>
-        <th style="width:100px"> Giá tiền </th>
-        <th style="width:100px"> Số lượng </th>
-        <th style="width:150px"> Ngày cập nhật </th>
-        <th style="width:250px"> Hình ảnh </th>
-        <th style="width:300px"> Mô tả </th>
-        <th style="width:130px"> Tên nhà cung cấp </th>
-        <th style="width:130px"> Tên thương hiệu </th>
-        <th style="width:130px"> Tên loại </th>
-        <th style="width:150px">  </th>
+        <th style="width: 200px; text-align: center"> Tên sách </th>
+        <th style="width: 100px; text-align: center"> Giá tiền </th>
+        <th style="width: 100px; text-align: center"> Số lượng </th>
+        <th style="width: 150px; text-align: center"> Ngày cập nhật </th>
+        <th style="width: 250px; text-align: center"> Hình ảnh </th>
+        <th style="width: 300px; text-align: center"> Mô tả </th>
+        <th style="width: 130px; text-align: center"> Tên nhà cung cấp </th>
+        <th style="width: 130px; text-align: center"> Tên thương hiệu </th>
+        <th style="width: 130px; text-align: center"> Tên loại </th>
+        <th style="width: 150px; text-align: center">  </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -75,7 +72,10 @@
     </tr>
 }
 </table>
-Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;
+<p>
+    @Html.ActionLink("Thêm mới", "ThemmoiSP")
+</p>
+@*Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;*@
 <div class="MenuTrang">
     @Html.PagedListPager(Model, page => Url.Action("Game", new {page = page}))
 </div>

@@ -281,6 +281,7 @@
     <Content Include="assets\js\tree.min.js" />
     <Content Include="assets\js\wizard.min.js" />
     <Content Include="assets\swf\flashExport.swf" />
+    <Content Include="Content\bg_admin.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -2002,6 +2003,7 @@
     <Content Include="Content\images\blog3.jpg" />
     <Content Include="Content\images\brand.png" />
     <Content Include="Content\images\confirm-shop.jpg" />
+    <Content Include="Content\images\delete.gif" />
     <Content Include="Content\images\ditconmemay.jpg" />
     <Content Include="Content\images\djtmecorona.jpg" />
     <Content Include="Content\images\driving.jpg" />

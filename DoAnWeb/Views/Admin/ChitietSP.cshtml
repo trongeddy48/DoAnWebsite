@@ -5,11 +5,14 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>THÔNG TIN CHI TIẾT SẢN PHẨM</h2>
+<h2 style="text-align:center">Chi Tiết Sản Phẩm</h2>
 
 <div>
     <hr />
-    <dl class="dl-horizontal">
+    <dd>
+        <img src="@Url.Content("~/Content/HinhSanPham/" + Model.HinhAnh)" style="margin-left:60%;width:40%;margin-top:-10px;border-radius:10px;border:1px solid" />
+    </dd>
+    <dl class="dl-horizontal" style="margin-top:-40%;margin-left:-17px;border:1px solid;width:60%;border-radius:10px">
         <dt>
             Tên sản phẩm:
         </dt>
@@ -27,7 +30,7 @@
         </dd>
 
         <dt>
-           Số lượng:
+            Số lượng:
         </dt>
 
         <dd>
@@ -46,9 +49,7 @@
             Hình ảnh:
         </dt>
 
-        <dd>
-            <img src="@Url.Content("~/Content/HinhSanPham/" + Model.HinhAnh)" width="450px"/>
-        </dd>
+
 
         <dt>
             Mô tả:
@@ -84,7 +85,15 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("CHỈNH SỬA", "SuaSP", new { id = Model.MaSP }) |
+<div class="vddetail">
+    <iframe width="700" height="340" src="https://www.youtube.com/embed/9vBERnMfQPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left:151px"></iframe>
+</div>
+<p style="border:1px solid;text-align:center;background-color:orange;font-weight:bold;border-radius:5px;width:12%;margin-left:23%">
+    @Html.ActionLink("CHỈNH SỬA", "SuaSP", new { id = Model.MaSP }, new { @class = "colorinline" })) |
     @Html.ActionLink("TRỞ VỀ", "Game")
+    <style>
+        a.colorinline {
+            text-decoration: none
+        }
+    </style>
 </p>
