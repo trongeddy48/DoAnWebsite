@@ -1975,6 +1975,9 @@
     <Content Include="Content\ImageDetail\ct4.jpg" />
     <Content Include="Content\ImageDetail\ct5.jpg" />
     <Content Include="Content\ImageDetail\ct6.jpg" />
+    <Content Include="Content\ImageDetail\Loai1_admin.jpg" />
+    <Content Include="Content\ImageDetail\Loai2_admin.jpg" />
+    <Content Include="Content\ImageDetail\Loai3.admin.jpg" />
     <Content Include="Content\ImageDetail\n1.jpg" />
     <Content Include="Content\ImageDetail\n2.jpg" />
     <Content Include="Content\ImageDetail\n3.jpg" />
