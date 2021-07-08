@@ -217,5 +217,17 @@ namespace DoAnWeb.Controllers
             db.SubmitChanges();
             return RedirectToAction("Game");
         }
+
+        //QL loai sp
+        public ActionResult Loaisanpham()
+        {
+            return View(db.tblLoaiSanPhams.ToList());
+        }
+
+        [HttpGet]
+        public ActionResult Themloaisanpham()
+        {
+            return View();
+        }
     }
 }
