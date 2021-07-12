@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WebsiteGameStore_Fix" Class="dbQLBanGameDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=NTT-ROG\EXPRESSSERVER;Initial Catalog=WebsiteGameStore_Fix;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WebsiteGameStore_FixConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=NTT-ROG;Initial Catalog=WebsiteGameStore_Fix;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WebsiteGameStore_FixConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tblChiTietDonHang" Member="tblChiTietDonHangs">
     <Type Name="tblChiTietDonHang">
       <Column Name="MaSP" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />

@@ -295,5 +295,84 @@ namespace DoAnWeb.Controllers
             db.SubmitChanges();
             return RedirectToAction("Loaisanpham");
         }
+
+        //QL Thuong Hieu
+        public ActionResult Thuonghieu()
+        {
+            return View(db.tblThuongHieus.ToList());
+        }
+
+        [HttpGet]
+        public ActionResult Themthuonghieu()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Themthuonghieu(FormCollection collection, tblThuongHieu th)
+        {
+            //Tạo biến loaisanpham và gán giá trị của người dùng nhập vào
+            var thuonghieu = collection["TenTH"];
+            //nếu loaisanpham có giá trị == null (để trống)
+            if (string.IsNullOrEmpty(thuonghieu))
+            {
+                ViewData["Loi"] = "Tên thương hiệu sản phẩm không được để trống";
+            }
+            else
+            {
+                string min = DateTime.Now.ToString("mm");
+                string sec = DateTime.Now.ToString("ss");
+                string MaThuongHieu = "L" + "" + min + "" + sec;
+                th.MaTH = MaThuongHieu;
+                th.TenTH = thuonghieu;
+                db.tblThuongHieus.InsertOnSubmit(th);
+                db.SubmitChanges();
+                return RedirectToAction("Thuonghieu");
+            }
+            return this.Themthuonghieu();
+        }
+
+        //Sua thuong hieu
+        [HttpGet]
+        public ActionResult Suathuonghieu(string id)
+        {
+            var thuonghieu = db.tblThuongHieus.FirstOrDefault(m => m.MaTH == id);
+            return View(thuonghieu);
+        }
+        [HttpPost]
+        public ActionResult Suathuonghieu(string id, FormCollection collection)
+        {
+            var thuonghieu = db.tblThuongHieus.FirstOrDefault(m => m.MaTH == id);
+            var th = collection["TenTH"];
+            thuonghieu.MaTH = id;
+            if (string.IsNullOrEmpty(th))
+            {
+                ViewData["Loi"] = "Thương hiệu sản phẩm không được để trống !!";
+            }
+            else
+            {
+                thuonghieu.TenTH = th;
+                UpdateModel(th);
+                db.SubmitChanges();
+                return RedirectToAction("Thuonghieu");
+            }
+            return this.Suathuonghieu(id);
+        }
+
+
+        [HttpGet]
+        public ActionResult Xoathuonghieu(string id)
+        {
+            var thuonghieu = db.tblThuongHieus.First(m => m.MaTH == id);
+            return View(thuonghieu);
+        }
+        [HttpPost]
+        public ActionResult Xoathuonghieu(string id, FormCollection collection)
+        {
+            var thuonghieu = db.tblThuongHieus.Where(m => m.MaTH == id).First();
+            db.tblThuongHieus.DeleteOnSubmit(thuonghieu);
+            db.SubmitChanges();
+            return RedirectToAction("Thuonghieu");
+        }
     }
 }
