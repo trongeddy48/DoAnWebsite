@@ -1986,6 +1986,10 @@
     <Content Include="Content\ImageDetail\n6.jpg" />
     <Content Include="Content\ImageDetail\n7.jpg" />
     <Content Include="Content\ImageDetail\n8.jpg" />
+    <Content Include="Content\ImageDetail\ncc1.jpg" />
+    <Content Include="Content\ImageDetail\ncc2.jpg" />
+    <Content Include="Content\ImageDetail\ncc3.jpg" />
+    <Content Include="Content\ImageDetail\ncc4.jpg" />
     <Content Include="Content\ImageDetail\piggybank.png" />
     <Content Include="Content\ImageDetail\shield.png" />
     <Content Include="Content\ImageDetail\shipped.png" />
@@ -2317,6 +2321,10 @@
     <Content Include="Views\Admin\Suathuonghieu.cshtml" />
     <Content Include="Views\Admin\Thuonghieu.cshtml" />
     <Content Include="Views\Admin\Xoathuonghieu.cshtml" />
+    <Content Include="Views\Admin\Nhacungcap.cshtml" />
+    <Content Include="Views\Admin\Themnhacungcap.cshtml" />
+    <Content Include="Views\Admin\Suanhacungcap.cshtml" />
+    <Content Include="Views\Admin\Xoanhacungcap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

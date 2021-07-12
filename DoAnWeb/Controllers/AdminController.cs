@@ -374,5 +374,83 @@ namespace DoAnWeb.Controllers
             db.SubmitChanges();
             return RedirectToAction("Thuonghieu");
         }
+
+        //QL Nha cung cap
+        public ActionResult Nhacungcap()
+        {
+            return View(db.tblNhaCungCaps.ToList());
+        }
+
+        [HttpGet]
+        public ActionResult Themnhacungcap()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Themnhacungcap(FormCollection collection, tblNhaCungCap ncc)
+        {
+            //Tạo biến loaisanpham và gán giá trị của người dùng nhập vào
+            var nhacc = collection["TenNCC"];
+            //nếu loaisanpham có giá trị == null (để trống)
+            if (string.IsNullOrEmpty(nhacc))
+            {
+                ViewData["Loi"] = "Tên nhà cung cấp sản phẩm không được để trống";
+            }
+            else
+            {
+                string min = DateTime.Now.ToString("mm");
+                string sec = DateTime.Now.ToString("ss");
+                string MaNhaCungCap = "L" + "" + min + "" + sec;
+                ncc.MaNCC = MaNhaCungCap;
+                ncc.TenNCC = nhacc;
+                db.tblNhaCungCaps.InsertOnSubmit(ncc);
+                db.SubmitChanges();
+                return RedirectToAction("Nhacungcap");
+            }
+            return this.Themnhacungcap();
+        }
+
+        //Sua nha cung cap
+        [HttpGet]
+        public ActionResult Suanhacungcap(string id)
+        {
+            var nhacc = db.tblNhaCungCaps.First(m => m.MaNCC == id);
+            return View(nhacc);
+        }
+        [HttpPost]
+        public ActionResult Suanhacungcap(string id, FormCollection collection)
+        {
+            var nhacc = db.tblNhaCungCaps.First(m => m.MaNCC == id);
+            var ncc = collection["TenNCC"];
+            nhacc.MaNCC = id;
+            if (string.IsNullOrEmpty(ncc))
+            {
+                ViewData["Loi"] = "Loại sản phẩm  không được để trống";
+            }
+            else
+            {
+                nhacc.TenNCC = ncc;
+                UpdateModel(ncc);
+                db.SubmitChanges();
+                return RedirectToAction("Nhacungcap");
+            }
+            return this.Suanhacungcap(id);
+        }
+
+        [HttpGet]
+        public ActionResult Xoanhacungcap(string id)
+        {
+            var nhacc = db.tblNhaCungCaps.First(m => m.MaNCC == id);
+            return View(nhacc);
+        }
+        [HttpPost]
+        public ActionResult Xoanhacungcap(string id, FormCollection collection)
+        {
+            var nhacc = db.tblNhaCungCaps.Where(m => m.MaNCC == id).First();
+            db.tblNhaCungCaps.DeleteOnSubmit(nhacc);
+            db.SubmitChanges();
+            return RedirectToAction("Nhacungcap");
+        }
     }
 }
