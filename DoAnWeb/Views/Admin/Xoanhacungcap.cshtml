@@ -5,15 +5,14 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Xoanhacungcap</h2>
+<h2 style="text-align:center">Xóa Nhà Cung Cấp</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3 style="text-align:center">Bạn thực sự muốn xóa nhà cung cấp này?</h3>
 <div>
-    <h4>tblNhaCungCap</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.TenNCC)
+            Tên nhà cung cấp:
         </dt>
 
         <dd>
@@ -21,7 +20,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DiaChi)
+            Địa chỉ:
         </dt>
 
         <dd>
@@ -29,7 +28,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SDT)
+            Số điện thoại:
         </dt>
 
         <dd>
@@ -43,8 +42,25 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Xóa" class="btn btn-default" style="margin-left:748px" /> |
+            @Html.ActionLink("Trở Về", "Nhacungcap", null, new { @class = "textnone" })
+            <style>
+                a.textnone {
+                    font-size: 14px;
+                    color: white;
+                    position: absolute;
+                    text-decoration: none;
+                    background-color: #ABBAC3;
+                    height: 42px;
+                    width: 64px;
+                    text-align: center;
+                    padding-top: 11px;
+                    margin-left: 5px;
+                }
+            </style>
         </div>
     }
+    <div class="delete-image">
+        <img src="~/Content/images/delete.gif" style="width: 26%; margin-left: 36.6%;" />
+    </div>
 </div>
