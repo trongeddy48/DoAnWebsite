@@ -1993,6 +1993,21 @@
     <Content Include="Content\ImageDetail\piggybank.png" />
     <Content Include="Content\ImageDetail\shield.png" />
     <Content Include="Content\ImageDetail\shipped.png" />
+    <Content Include="Content\ImageDetail\th1.jpg" />
+    <Content Include="Content\ImageDetail\th2.jpg" />
+    <Content Include="Content\ImageDetail\th3.jpg" />
+    <Content Include="Content\ImageDetail\tt1.png" />
+    <Content Include="Content\ImageDetail\tt10.jpg" />
+    <Content Include="Content\ImageDetail\tt11.jpg" />
+    <Content Include="Content\ImageDetail\tt12.jpg" />
+    <Content Include="Content\ImageDetail\tt2.jpg" />
+    <Content Include="Content\ImageDetail\tt3.jpg" />
+    <Content Include="Content\ImageDetail\tt4.jpg" />
+    <Content Include="Content\ImageDetail\tt5.jpg" />
+    <Content Include="Content\ImageDetail\tt6.jpg" />
+    <Content Include="Content\ImageDetail\tt7.png" />
+    <Content Include="Content\ImageDetail\tt8.png" />
+    <Content Include="Content\ImageDetail\tt9.png" />
     <Content Include="Content\images\banner-intro.jpg" />
     <Content Include="Content\images\banner1.jpg" />
     <Content Include="Content\images\banner10.jpg" />
@@ -2327,6 +2342,8 @@
     <Content Include="Views\Admin\Xoanhacungcap.cshtml" />
     <Content Include="Views\Admin\Khachhang.cshtml" />
     <Content Include="Views\Admin\Xoakhachhang.cshtml" />
+    <Content Include="Views\Post\page2.cshtml" />
+    <Content Include="Views\Post\page3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

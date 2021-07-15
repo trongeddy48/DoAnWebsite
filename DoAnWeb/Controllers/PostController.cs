@@ -13,5 +13,14 @@ namespace DoAnWeb.Controllers
         {
             return View();
         }
+
+        public ActionResult page2()
+        {
+            return View();
+        }
+        public ActionResult page3()
+        {
+            return View();
+        }
     }
 }
