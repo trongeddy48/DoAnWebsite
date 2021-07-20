@@ -16,7 +16,10 @@ namespace DoAnWeb.Controllers
         dbQLBanGameDataContext db = new dbQLBanGameDataContext();
         public ActionResult Index()
         {
-            return View();
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+                return View();
         }
 
         public ActionResult Game(int ?page)
@@ -471,6 +474,12 @@ namespace DoAnWeb.Controllers
             db.tblKhacHangs.DeleteOnSubmit(khachhang);
             db.SubmitChanges();
             return RedirectToAction("Khachhang");
+        }
+
+        //QL don hang
+        public ActionResult Donhang()
+        {
+            return View(db.tblDonHangs.ToList());
         }
     }
 }

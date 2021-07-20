@@ -137,13 +137,13 @@ namespace DoAnWeb.Controllers
         public ActionResult DatHang()
         {
             //kiem tra dang nhap 
-            if (Session["Taikhoan"] == null || Session["Taikhoan"].ToString() == "")
+            if (Session["Username"] == null || Session["Username"].ToString() == "")
             {
                 return RedirectToAction("Dangnhap", "Nguoidung");
             }
             if (Session["Giohang"] == null)
             {
-                return RedirectToAction("Index", "BookStore");
+                return RedirectToAction("Index", "GameProduct");
             }
             //Lay gio hang tu Session 
             List<Giohang> lstGiohang = Laygiohang();
@@ -156,7 +156,7 @@ namespace DoAnWeb.Controllers
         public ActionResult DatHang(FormCollection collection)
         {
             tblDonHang dh = new tblDonHang();
-            tblKhacHang kh = (tblKhacHang)Session["Taikhoan"];
+            tblKhacHang kh = (tblKhacHang)Session["Username"];
             List<Giohang> gh = Laygiohang();
             string min = DateTime.Now.ToString("mm");
             string sec = DateTime.Now.ToString("ss");

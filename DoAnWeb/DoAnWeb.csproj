@@ -292,6 +292,7 @@
     <Content Include="Content\css\post.css" />
     <Content Include="Content\css\product.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\dangnhap.css" />
     <Content Include="Content\fonts\fontawesome\css\all.css" />
     <Content Include="Content\fonts\fontawesome\css\all.min.css" />
     <Content Include="Content\fonts\fontawesome\css\brands.css" />
@@ -2101,6 +2102,7 @@
     <Content Include="Content\js\jq.js" />
     <Content Include="Content\js\jquery-3.3.1.js" />
     <Content Include="Content\js\owl.js" />
+    <Content Include="Content\js\script.js" />
     <Content Include="Content\js\slider.js" />
     <Content Include="Content\js\vue.js" />
     <Content Include="Content\login_admin_img.jpg" />
@@ -2116,6 +2118,7 @@
     <Content Include="Content\owlcarousel\owl.carousel.min.js" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\video\introps5.mp4" />
     <Content Include="Content\video\video.mp4" />
     <Content Include="Content\xboxbnlog.jpg" />
     <Content Include="favicon.ico" />
@@ -2307,8 +2310,6 @@
     <Content Include="Views\GameProduct\Loaisp.cshtml" />
     <Content Include="Views\GameProduct\SPTheotheloai.cshtml" />
     <Content Include="Views\GameProduct\Details.cshtml" />
-    <Content Include="Views\NguoiDung\Dangky.cshtml" />
-    <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
     <Content Include="Views\Giohang\Giohang.cshtml" />
     <Content Include="Views\Giohang\GiohangPartial.cshtml" />
     <Content Include="Views\Giohang\DatHang.cshtml" />
@@ -2344,6 +2345,9 @@
     <Content Include="Views\Admin\Xoakhachhang.cshtml" />
     <Content Include="Views\Post\page2.cshtml" />
     <Content Include="Views\Post\page3.cshtml" />
+    <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
+    <Content Include="Views\NguoiDung\Dangky.cshtml" />
+    <Content Include="Views\Admin\Donhang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

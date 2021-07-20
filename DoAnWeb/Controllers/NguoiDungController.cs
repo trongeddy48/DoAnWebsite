@@ -87,33 +87,31 @@ namespace DoAnWeb.Controllers
         {
             return View();
         }
-
-        [HttpPost]
         public ActionResult Dangnhap(FormCollection collection)
         {
-            //Gán giá trị ng dùng
-            var tendn = collection["TenDN"];
-            var matkhau = collection["Matkhau"];
-            if(String.IsNullOrEmpty(tendn))
+            //Gán các giá trị người dùng nhập liệu cho các biến
+            var tendn = collection["username"];
+            var matkhau = collection["password"];
+            if (string.IsNullOrEmpty(tendn))
             {
                 ViewData["Loi1"] = "Phải nhập tên đăng nhập";
             }
-            else if(String.IsNullOrEmpty(matkhau))
+            else if (string.IsNullOrEmpty(matkhau))
             {
                 ViewData["Loi2"] = "Phải nhập mật khẩu";
             }
             else
             {
-                //Gán giá trị cho đối tượng tạo mới (kh)
+                //Gán giá trị cho đôi tượng được tạo mới (kh)
                 tblKhacHang kh = db.tblKhacHangs.SingleOrDefault(n => n.Username == tendn && n.Password == matkhau);
                 if (kh != null)
                 {
-                    //ViewBag.Thongbao = "Đăng nhập thành công !";
-                    Session["Taikhoan"] = kh;
+                    //ViewBag.Thongbao = "Bạn đăng nhập thành công!";
+                    Session["Username"] = kh;
                     return RedirectToAction("Index", "GameProduct");
                 }
                 else
-                    ViewBag.Thongbao = "Tên đăng nhập hoặc mật khẩu không đúng !";
+                    ViewBag.Thongbao = "Tên đăng nhập hoặc mật khẩu không đúng";
             }
             return View();
         }
