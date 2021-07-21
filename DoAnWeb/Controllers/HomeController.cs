@@ -23,5 +23,10 @@ namespace DoAnWeb.Controllers
             var gamemoi = Laygamemoi(5);
             return View(gamemoi);
         }
+
+        public ActionResult Tutorial()
+        {
+            return View();
+        }
     }
 }

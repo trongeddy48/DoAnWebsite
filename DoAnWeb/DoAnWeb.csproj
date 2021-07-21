@@ -139,6 +139,7 @@
     <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\TutorialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2348,6 +2349,11 @@
     <Content Include="Views\NguoiDung\Dangnhap.cshtml" />
     <Content Include="Views\NguoiDung\Dangky.cshtml" />
     <Content Include="Views\Admin\Donhang.cshtml" />
+    <Content Include="Views\Home\Tutorial.cshtml" />
+    <Content Include="Views\Tutorial\Index.cshtml" />
+    <Content Include="Views\Tutorial\Tuto1.cshtml" />
+    <Content Include="Views\Tutorial\Tuto2.cshtml" />
+    <Content Include="Views\Tutorial\Tuto3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
