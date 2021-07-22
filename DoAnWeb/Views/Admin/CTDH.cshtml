@@ -1,0 +1,66 @@
+﻿@model IEnumerable<DoAnWeb.Models.tblChiTietDonHang>
+
+@{
+    ViewBag.Title = "CTDH";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chi Tiết Đơn Hàng</h2>
+
+
+<table class="table">
+    <tr>
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Mã Đơn Hàng
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Mã Sản Phẩm
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Mã Khách Hàng
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Số Lượng
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Đơn Giá
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Chức năng
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.MaDH)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.MaSP)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.MaKH)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.DonGia)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
+<p style="background-color:orange;border-radius:5px;font-size:17px;text-align:center;margin-left:45%;width:7%">
+    @Html.ActionLink("Thêm Mới", "Themchitietdonhang", null, new { @class = "colortext" })
+    <style>
+        a.colortext {
+            text-decoration: none
+        }
+    </style>
+</p>

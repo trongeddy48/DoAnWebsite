@@ -481,5 +481,11 @@ namespace DoAnWeb.Controllers
         {
             return View(db.tblDonHangs.ToList());
         }
+
+        //QL CTDH
+        public ActionResult CTDH()
+        {
+            return View(db.tblChiTietDonHangs.ToList());
+        }
     }
 }

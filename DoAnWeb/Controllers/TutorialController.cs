@@ -28,5 +28,25 @@ namespace DoAnWeb.Controllers
         {
             return View();
         }
+
+        public ActionResult Tuto4()
+        {
+            return View();
+        }
+
+        public ActionResult Tuto5()
+        {
+            return View();
+        }
+
+        public ActionResult Tuto6()
+        {
+            return View();
+        }
+
+        public ActionResult Tuto7()
+        {
+            return View();
+        }
     }
 }

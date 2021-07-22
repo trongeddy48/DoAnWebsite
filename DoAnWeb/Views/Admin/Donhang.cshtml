@@ -10,6 +10,12 @@
 <table class="table">
     <tr>
         <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Mã Đơn Hàng
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Mã Khách Hàng
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
             Ngày Lập
         </th>
         <th style="border:1px solid;font-size: 15px;text-align: center;">
@@ -22,8 +28,8 @@
             Tình trạng giao hàng
         </th>
         @*<th style="border:1px solid;font-size: 15px;text-align: center;">
-                @Html.DisplayNameFor(model => model.Username)
-            </th>*@
+            @Html.DisplayNameFor(model => model.Username)
+        </th>*@
         <th style="border:1px solid;font-size: 15px;text-align: center;">
             Chức năng
         </th>
@@ -32,6 +38,12 @@
     @foreach (var item in Model)
     {
         <tr>
+            <td style="border:1px solid;text-align:center">
+                @Html.DisplayFor(modelItem => item.MaDH)
+            </td>
+            <td style="border:1px solid;text-align:center">
+                @Html.DisplayFor(modelItem => item.MaKH)
+            </td>
             <td style="border:1px solid;text-align:center">
                 @Html.DisplayFor(modelItem => item.NgayLap)
             </td>
