@@ -110,7 +110,16 @@
                         @Html.ActionLink("Liên hệ", "Index", "Contact", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="headernav-item">
-                        @Html.ActionLink("Đăng nhập", "Dangnhap", "Nguoidung", null, new { @class = "colorTextAction" }) &emsp;
+                        @if ((DoAnWeb.Models.tblKhacHang)Session["Username"] != null)
+                        {
+                            var user = (DoAnWeb.Models.tblKhacHang)Session["Username"];
+                            <a style="color: yellow;">@user.TenKH</a>
+                            <a href="@Url.Action("Dangxuat","Nguoidung")"><i class="fas fa-sign-out-alt" style="color: black; margin-left: 5px;"></i></a>
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Đăng nhập", "Dangnhap", "Nguoidung", null, new { @class = "colorTextAction" })
+                        }
                     </li>
                     <li class="header__nav-item">
                         @Html.Action("GiohangPartial", "Giohang")
